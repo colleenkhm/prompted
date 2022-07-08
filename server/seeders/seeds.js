@@ -25,14 +25,14 @@ db.once('open', async () => {
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
     const { _id: userId } = createdUsers.ops[randomUserIndex];
 
-    let friendId = userId;
+    let supporter = userId;
 
-    while (friendId === userId) {
+    while (supporterId === userId) {
       const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
-      friendId = createdUsers.ops[randomUserIndex];
+      supporterId = createdUsers.ops[randomUserIndex];
     }
 
-    await User.updateOne({ _id: userId }, { $addToSet: { friends: friendId } });
+    await User.updateOne({ _id: userId }, { $addToSet: { supporters: supporterId } });
   }
 
   // create entries
