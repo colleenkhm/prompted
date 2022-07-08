@@ -26,4 +26,4 @@ const EntrySchema = new Schema (
 
 const Entry = model('Entry', EntrySchema);
 
-module.exports = Thought;
+module.exports = Entry;

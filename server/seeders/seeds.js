@@ -1,7 +1,7 @@
 const faker = require('faker');
 
 const db = require('../config/connection');
-const { Entry, User } = require('../../module-21-server-starter/models');
+const { Entry, User } = require('../models');
 
 db.once('open', async () => {
   await Entry.deleteMany({});
