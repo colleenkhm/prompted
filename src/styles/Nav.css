@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  header h1 a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  header h1 a:hover {
+    color: #007bff;
+  }
+  
+  .nav-bar {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+  }
+  
+  .section-link {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .section-link:hover {
+    a:hover {
+        text-decoration: none;
+        color: black;
+    }
+  }
+  
+  /* Underline effect on hover */
+  .section-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: width 0.3s ease;
+  }
+  
+  .section-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Active link style */
+  [href="#home"]:hover,
+  [href="#about"]:hover,
+  [href="#profile"]:hover,
+  [href="#archives"]:hover,
+  [href="#contact"]:hover {
+    color: black;
+  }
+  
+  /* Add active class to the current page */
+  .active-link {
+    color: black !important;
+  }
+  
+  .active-link::after {
+    width: 100%;
+    background-color: black;
+  }
+  
+  /* Main content area */
+  main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    header h1 {
+      margin-bottom: 1rem;
+    }
+    
+    .nav-bar {
+      gap: 1rem;
+    }
+  }
